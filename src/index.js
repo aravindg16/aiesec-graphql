@@ -9,6 +9,8 @@ const server = new ApolloServer({
   dataSources: () => ({
     opportunityAPI: new OpportunityAPI(),
   }),
+  playground: true,
+  introspection: true,
 })
 
 server.listen().then(({ url }) => {
